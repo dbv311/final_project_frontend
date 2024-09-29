@@ -5,4 +5,29 @@
   line-height: 1.2;
   letter-spacing: 0em;
   text-align: left;
+  display: flex;
+}
+
+.about__location {
+  margin: auto;
+}
+
+.about__hours {
+  margin-bottom: 10px;
+}
+
+.about__details-week {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+@media screen and (max-width: 767px) {
+  .about {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    row-gap: 0;
+    justify-content: center;
+  }
 }

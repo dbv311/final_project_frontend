@@ -1,9 +1,23 @@
 .header {
   display: flex;
-  flex-direction: column;
+  font-family: Roboto;
+  font-size: 20x;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0em;
+  justify-content: space-between;
 }
 
 .header__logo {
   margin-top: 20px;
   max-width: 173px;
+}
+
+.header__container {
+  text-align: end;
+}
+
+.header__info {
+  display: flex;
+  flex-direction: column;
 }

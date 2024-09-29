@@ -5,12 +5,32 @@
   line-height: 1.2;
   letter-spacing: 0em;
   text-align: left;
-  margin: 100px 650px 50px 0;
+  margin: auto;
   color: white;
+}
+
+.footer__social {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.footer__social-icon {
+  max-width: 16px;
+  margin-right: 16px;
+}
+
+.footer__list-item {
+  list-style-type: none;
+}
+
+.footer__social-link:hover {
+  color: #c1c1c1;
 }
 
 @media screen and (max-width: 767px) {
   .footer {
     margin-inline: auto;
+    margin-top: 10px;
   }
 }
