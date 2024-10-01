@@ -1,0 +1,9 @@
+.car__info {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0em;
+  text-align: left;
+  display: flex;
+}

@@ -6,10 +6,7 @@ body {
   align-items: center;
   margin: auto;
   width: 882px;
-}
-
-.page {
-  font-family: "Roboto";
+  font-family: Roboto;
 }
 
 @font-face {
