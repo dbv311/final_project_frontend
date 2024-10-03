@@ -1,23 +1,17 @@
 class Api {
-  constructor(url, token) {
+  constructor(url) {
     this._url = url;
-    this._token = token;
   }
 
-  async getMusic() {
-    const res = await fetch(`${this._url}music`, {
-      headers: {
-        authorization: `Bearer ${this._token}`,
-      },
+  async getCar() {
+    const res = await fetch(`${this._url}`, {
+      headers: {},
     });
     return await res.json();
   }
 }
 
-const api = new Api(
-  "https://api.spotify.com/",
-  "ba8a9a7fd88f4662ab39b922e5bd41ce"
-);
+const api = new Api("https://freetestapi.com/api/v1/cars");
 
 export default api;
 

@@ -9,6 +9,10 @@ body {
   font-family: Roboto;
 }
 
+.page {
+  width: 882px;
+}
+
 @font-face {
   font-family: "Roboto";
   font-style: normal;

@@ -7,12 +7,13 @@ import api from "../utils/ApiThirdParty";
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import CarInfo from "./CarInfo";
+import Main from "./Main";
 
 function App() {
   const [data, setData] = React.useState(null);
 
   React.useEffect(() => {
-    api.getMusic().then((data) => setData(data));
+    api.getCar().then((data) => setData(data));
   }, []);
 
   return (
@@ -20,10 +21,17 @@ function App() {
       <Header />
       <Navigation />
       <Routes>
+        <Route
+          path="/*"
+          element={
+            <>
+              <Main />
+              <About />
+            </>
+          }
+        />
         <Route path="/cars" element={<CarInfo />} />
-        <Route path="/*" element={<About />} />
       </Routes>
-
       <Footer />
     </div>
   );
