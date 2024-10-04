@@ -31,7 +31,7 @@ function Main() {
       <Slider {...settings} style={carouselStyles}>
         {images.map((image, index) => (
           <div key={index}>
-            <img src={image} alt="slide" width={"100%"} height={"100%"} />
+            <img src={image} alt="cars" width={"100%"} height={"100%"} />
           </div>
         ))}
       </Slider>

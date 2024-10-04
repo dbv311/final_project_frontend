@@ -8,18 +8,27 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import CarInfo from "./CarInfo";
 import Main from "./Main";
+import Preloader from "./Preloader";
 
 function App() {
-  const [data, setData] = React.useState(null);
+  const [data, setData] = React.useState([]);
+  const [isLoading, setIsLoading] = React.useState(false);
 
   React.useEffect(() => {
-    api.getCar().then((data) => setData(data));
+    setIsLoading(true);
+    api
+      .getCar()
+      .then((data) => setData(data))
+      .finally(() => {
+        setIsLoading(false);
+      });
   }, []);
 
   return (
     <div className="page">
       <Header />
       <Navigation />
+      <Preloader show={isLoading} />
       <Routes>
         <Route
           path="/*"
@@ -30,7 +39,7 @@ function App() {
             </>
           }
         />
-        <Route path="/cars" element={<CarInfo />} />
+        <Route path="/cars" element={<CarInfo data={data} />} />
       </Routes>
       <Footer />
     </div>
