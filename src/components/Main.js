@@ -21,13 +21,13 @@ function Main() {
 
   const carouselStyles = {
     margin: "auto",
-    width: "50%",
+    width: "80%",
     height: "auto",
   };
 
   return (
     <main className="main">
-      Autos recién llegados
+      <h2 className="main__title ">Autos recién llegados</h2>
       <Slider {...settings} style={carouselStyles}>
         {images.map((image, index) => (
           <div key={index}>

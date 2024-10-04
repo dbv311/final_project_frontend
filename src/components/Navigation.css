@@ -21,3 +21,14 @@
   display: flex;
   list-style-type: none;
 }
+
+@media screen and (max-width: 767px) {
+  .nav {
+    width: 320px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    width: 320px;
+    text-align: 15px;
+  }
+}

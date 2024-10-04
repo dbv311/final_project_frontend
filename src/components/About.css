@@ -29,5 +29,7 @@
     margin: auto;
     row-gap: 0;
     justify-content: center;
+    text-align: center;
+    font-size: 15px;
   }
 }
