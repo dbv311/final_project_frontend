@@ -19,6 +19,10 @@ function App() {
     api
       .getCar()
       .then((data) => setData(data))
+      .catch((error) => {
+        //colocar mensaje de error
+        error;
+      })
       .finally(() => {
         setIsLoading(false);
       });

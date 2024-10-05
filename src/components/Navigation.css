@@ -8,6 +8,7 @@
   justify-content: flex-end;
   background-color: white;
   color: black;
+  height: 30px;
 }
 
 .nav__container {
@@ -29,6 +30,5 @@
     display: flex;
     justify-content: center;
     width: 320px;
-    text-align: 15px;
   }
 }

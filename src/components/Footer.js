@@ -9,7 +9,10 @@ function Footer() {
         <h2 class="footer__social-heading">Redes sociales</h2>
         <ul class="footer__list">
           <li class="footer__list-item">
-            <a class="footer__social-link" href="#">
+            <a
+              class="footer__social-link"
+              href="https://web.facebook.com/people/RPM-Autos/61554824131760/?locale=es_LA"
+            >
               <img
                 src={facebookLogo}
                 alt="Facebook logo"
@@ -19,7 +22,10 @@ function Footer() {
             </a>
           </li>
           <li class="footer__list-item">
-            <a class="footer__social-link" href="#">
+            <a
+              class="footer__social-link"
+              href="https://www.instagram.com/rpmautos.cl/"
+            >
               <img
                 src={instagramLogo}
                 alt="Instagram logo"

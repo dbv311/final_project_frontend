@@ -31,7 +31,13 @@ function Main() {
       <Slider {...settings} style={carouselStyles}>
         {images.map((image, index) => (
           <div key={index}>
-            <img src={image} alt="cars" width={"100%"} height={"100%"} />
+            <img
+              className="main__image"
+              src={image}
+              alt="cars"
+              width={"100%"}
+              height={"100%"}
+            />
           </div>
         ))}
       </Slider>
@@ -40,10 +46,3 @@ function Main() {
 }
 
 export default Main;
-
-/*const images = [
-    "https://picsum.photos/200",
-    "https://picsum.photos/205",
-    "https://picsum.photos/202",
-    "https://picsum.photos/203",
-  ];*/

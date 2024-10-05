@@ -15,6 +15,10 @@
   margin: auto;
 }
 
+.main__image {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 767px) {
   .main {
     width: 320px;

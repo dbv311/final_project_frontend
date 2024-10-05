@@ -5,7 +5,9 @@ class Api {
 
   async getCar() {
     const res = await fetch(`${this._url}`, {
-      headers: {},
+      headers: {
+        "Content-Type": "application/json",
+      },
     });
     return await res.json();
   }
