@@ -19,9 +19,11 @@ function App() {
     api
       .getCar()
       .then((data) => setData(data))
-      .catch((error) => {
-        //colocar mensaje de error
-        error;
+      .catch((err) => {
+        return err.status(400).send({
+          message:
+            "Lo sentimos, algo ha salido mal durante la solicitud. Es posible que haya un problema de conexión o que el servidor no funcione. Por favor, inténtalo más tarde",
+        });
       })
       .finally(() => {
         setIsLoading(false);

@@ -1,9 +1,9 @@
 import "./CarInfo.css";
-import ImagesJson from "../data/images.json";
+import imagesJson from "../data/images.json";
 
 function CarInfo({ data }) {
   const getImage = (model) => {
-    return ImagesJson[model] || "https://fakeimg.pl/500x500/ff0000";
+    return imagesJson[model] || "https://fakeimg.pl/500x500/ff0000";
   };
 
   return (
@@ -12,8 +12,12 @@ function CarInfo({ data }) {
       {data.map((item, index) => {
         return (
           <div className="car__list" key={index}>
-            <img src={getImage(item.make)} />
-            {item.make}-{item.model}-{item.year}
+            {item.make} {item.model} {item.year}
+            <img
+              className="car__pictures"
+              src={getImage(item.model)}
+              alt="carpictures"
+            />
           </div>
         );
       })}
