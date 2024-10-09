@@ -4,15 +4,21 @@ class Api {
   }
 
   async getCar() {
-    const res = await fetch(`${this._url}`, {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    const res = await fetch(
+      `${this._url}`,
+      { mode: "no-cors" },
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
     return await res.json();
   }
 }
 
-const api = new Api("https://freetestapi.com/api/v1/cars");
+const api = new Api(
+  "https://vpic.nhtsa.dot.gov/api/vehicles/getmodelsformake/honda?format=json"
+);
 
 export default api;

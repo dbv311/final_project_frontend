@@ -12,10 +12,10 @@ function CarInfo({ data }) {
       {data.map((item, index) => {
         return (
           <div className="car__list" key={index}>
-            {item.make} {item.model} {item.year}
+            {item.make_name} {item.model_name} {item.year}
             <img
               className="car__pictures"
-              src={getImage(item.model)}
+              src={getImage(item.model_name)}
               alt="carpictures"
             />
           </div>
