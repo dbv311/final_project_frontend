@@ -9,10 +9,10 @@ function CarInfo({ data }) {
   return (
     <>
       <h2 className="car__info">Listado de autos por llegar:</h2>
-      {data.map((item, index) => {
+      {[data].map((item, index) => {
         return (
           <div className="car__list" key={index}>
-            {item.make_name} {item.model_name} {item.year}
+            {item.Make_ID} {item.Make_Name} {item.Model_Name} {item.year}
             <img
               className="car__pictures"
               src={getImage(item.model_name)}

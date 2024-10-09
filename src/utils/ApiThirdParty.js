@@ -6,7 +6,7 @@ class Api {
   async getCar() {
     const res = await fetch(
       `${this._url}`,
-      { mode: "no-cors" },
+
       {
         headers: {
           "Content-Type": "application/json",
@@ -18,7 +18,7 @@ class Api {
 }
 
 const api = new Api(
-  "https://vpic.nhtsa.dot.gov/api/vehicles/getmodelsformake/honda?format=json"
+  "https://vpic.nhtsa.dot.gov/api/vehicles/GetModelsForMakeId/440?format=json"
 );
 
 export default api;
