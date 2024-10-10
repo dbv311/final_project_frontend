@@ -9,21 +9,26 @@ import { Route, Routes } from "react-router-dom";
 import CarInfo from "./CarInfo";
 import Main from "./Main";
 import Preloader from "./Preloader";
+import Popup from "./Popup";
 
 function App() {
   const [data, setData] = React.useState([]);
   const [isLoading, setIsLoading] = React.useState(false);
+  const [isOpen, setIsOpen] = React.useState(false);
+  const [errorMessage, setErrorMessage] = React.useState("");
 
   React.useEffect(() => {
     setIsLoading(true);
     api
       .getCar()
-      .then((data) => setData(data))
+      .then((data) => {
+        setData(data.Results);
+      })
       .catch((err) => {
-        return err.status(400).send({
-          message:
-            "Lo sentimos, algo ha salido mal durante la solicitud. Es posible que haya un problema de conexión o que el servidor no funcione. Por favor, inténtalo más tarde",
-        });
+        setIsOpen(true);
+        setErrorMessage(
+          "Lo sentimos, algo ha salido mal durante la solicitud. Es posible que haya un problema de conexión o que el servidor no funcione. Por favor, inténtalo más tarde"
+        );
       })
       .finally(() => {
         setIsLoading(false);
@@ -47,6 +52,14 @@ function App() {
         />
         <Route path="/cars" element={<CarInfo data={data} />} />
       </Routes>
+      <Popup
+        open={isOpen}
+        handleClose={() => {
+          setIsOpen(false);
+        }}
+      >
+        <div className="App-alerts">{errorMessage}</div>
+      </Popup>
       <Footer />
     </div>
   );
