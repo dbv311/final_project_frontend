@@ -2,20 +2,22 @@ import "./CarInfo.css";
 import imagesJson from "../data/images.json";
 
 function CarInfo({ data }) {
-  const getImage = (model) => {
-    return imagesJson[model] || "https://fakeimg.pl/500x500/ff0000";
+  const getImage = (Model_Name) => {
+    return imagesJson[Model_Name] || "https://fakeimg.pl/500x500/ff0000";
   };
 
   return (
     <>
-      <h2 className="car__info">Listado de autos por llegar:</h2>
-      {[data].map((item, index) => {
+      <h2 className="car__info">
+        Déjate seducir por nuestra gama de Aston Martin
+      </h2>
+      {data.map((item, index) => {
         return (
           <div className="car__list" key={index}>
-            {item.Make_ID} {item.Make_Name} {item.Model_Name} {item.year}
+            {item.Make_Name} {item.Model_Name}
             <img
               className="car__pictures"
-              src={getImage(item.model_name)}
+              src={getImage(item.Model_Name)}
               alt="carpictures"
             />
           </div>
