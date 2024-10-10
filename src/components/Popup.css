@@ -32,19 +32,6 @@
   min-height: 300px;
 }
 
-.popup__form {
-  display: flex;
-  width: 430px;
-  height: 330px;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.popup_open {
-  visibility: visible;
-  opacity: 1;
-}
-
 .popup__close-icon {
   background-image: url(../images/CloseIconWhite.png);
   background-repeat: no-repeat;
@@ -54,7 +41,7 @@
   height: 40px;
   width: 40px;
   top: -40px;
-  right: calc(50% - 252px);
+  right: calc(57% - 252px);
   cursor: pointer;
   border: none;
 }
@@ -68,65 +55,9 @@
     min-width: 282px;
   }
 
-  .popup__form {
-    display: flex;
-    width: 282px;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-
-  .popup__edit {
-    font-family: Inter;
-    font-size: 18px;
-    font-weight: 900;
-    line-height: 1.2;
-    letter-spacing: 0em;
-    text-align: left;
-    color: black;
-    width: 238px;
-    margin: 25px 22px 20px;
-  }
-
-  .popup__add {
-    width: 282px;
-  }
-
-  .popup__input {
-    width: 238px;
-    margin: 0 22px;
-  }
-
-  .popup__input-about {
-    margin-top: 15px;
-  }
-
-  .popup__error {
-    margin: 0 22px;
-  }
-
-  .popup__button {
-    width: 238px;
-    margin: 22px;
-  }
-
   .popup__close-icon {
-    right: -7px;
+    right: 10px;
     width: 30px;
     height: 30px;
-  }
-
-  .popup__image {
-    width: 240px;
-    height: 330px;
-    position: relative;
-  }
-
-  .popup_card {
-    background: none;
-  }
-
-  .popup_confirmation {
-    width: 240px;
-    height: 181px;
   }
 }
