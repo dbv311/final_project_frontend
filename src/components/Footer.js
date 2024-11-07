@@ -6,30 +6,30 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer__social">
-        <h2 class="footer__social-heading">Redes sociales</h2>
-        <ul class="footer__list">
-          <li class="footer__list-item">
+        <h2 className="footer__social-heading">Redes sociales</h2>
+        <ul className="footer__list">
+          <li className="footer__list-item">
             <a
-              class="footer__social-link"
+              className="footer__social-link"
               href="https://web.facebook.com/people/RPM-Autos/61554824131760/?locale=es_LA"
             >
               <img
                 src={facebookLogo}
                 alt="Facebook logo"
-                class="footer__social-icon"
+                className="footer__social-icon"
               />
               Facebook
             </a>
           </li>
-          <li class="footer__list-item">
+          <li className="footer__list-item">
             <a
-              class="footer__social-link"
+              className="footer__social-link"
               href="https://www.instagram.com/rpmautos.cl/"
             >
               <img
                 src={instagramLogo}
                 alt="Instagram logo"
-                class="footer__social-icon"
+                className="footer__social-icon"
               />
               Instagram
             </a>
